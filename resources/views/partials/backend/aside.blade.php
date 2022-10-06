@@ -31,152 +31,19 @@
                                 Dashboard                                
                             </p>
                         </a>                        
-                    </li>                    
-
-                    @can('team-list')
-                    <li class="nav-item">
-                        <a href="{{ route('backend.team.index') }}" class="nav-link @isset($asideSelected) @if($asideSelected == 'team') active @endif @endisset">
-                            <i class="nav-icon fas fa-users"></i>
-                            <p>
-                                Team
-                            </p>
-                        </a>
                     </li>
-                    @endcan
 
-                    @can('patient-list')
-                    <li class="nav-item">
-                        <a href="{{ route('backend.patient.index') }}" class="nav-link @isset($asideSelected) @if($asideSelected == 'patient') active @endif @endisset">
-                            <i class="nav-icon fas fa-users"></i>
-                            <p>
-                                Patient
-                            </p>
-                        </a>
-                    </li>
-                    @endcan
 
-                    @can('testimonial-list')
                     <li class="nav-item">
-                        <a href="{{ route('backend.testimonials.index') }}" class="nav-link @isset($asideSelected) @if($asideSelected == 'testimonials') active @endif @endisset">
-                            <i class="nav-icon fas fa-comments"></i>
+                        <a href="{{ route('backend.form.index') }}" class="nav-link @isset($asideSelected) @if($asideSelected == 'form') active @endif @endisset">
+                            <i class="nav-icon fas fa-tachometer-alt"></i>
                             <p>
-                                Testimonials
+                                Form                                
                             </p>
-                        </a>
+                        </a>                        
                     </li>
-                    @endcan
-
-                    @can('client-list')
-                    <li class="nav-item">
-                        <a href="{{ route('backend.clients.index') }}" class="nav-link @isset($asideSelected) @if($asideSelected == 'clients') active @endif @endisset">
-                            <i class="nav-icon fas fa-images"></i>
-                            <p>
-                                Clients
-                            </p>
-                        </a>
-                    </li>
-                    @endcan                    
-
-                    @can('services-list')
-                    <li class="nav-item">
-                        <a href="{{ route('backend.services.index') }}" class="nav-link @isset($asideSelected) @if($asideSelected == 'services') active @endif @endisset">
-                            <i class="nav-icon fas fa-wrench"></i>
-                            <p>
-                                Services
-                            </p>
-                        </a>
-                    </li>
-                    @endcan
-
-                    @can('portfolio-list')
-                    <li class="nav-item">
-                        <a href="{{ route('backend.portfolio.index') }}" class="nav-link @isset($asideSelected) @if($asideSelected == 'portfolio') active @endif @endisset">
-                            <i class="nav-icon fas fa-image"></i>
-                            <p>
-                                Portfolio
-                            </p>
-                        </a>
-                    </li>
-                    @endcan
-
-                    @can('faq-list')
-                    <li class="nav-item">
-                        <a href="{{ route('backend.faqs.index') }}" class="nav-link @isset($asideSelected) @if($asideSelected == 'faqs') active @endif @endisset">
-                            <i class="nav-icon fas fa-question"></i>
-                            <p>
-                                FAQ
-                            </p>
-                        </a>
-                    </li>
-                    @endcan
-
-                    @can('blog-list')
-                    <li class="nav-item">
-                        <a href="{{ route('backend.blog.index') }}" class="nav-link @isset($asideSelected) @if($asideSelected == 'blog') active @endif @endisset">
-                            <i class="nav-icon fas fa-blog"></i>
-                            <p>
-                                Blog
-                            </p>
-                        </a>
-                    </li>
-                    @endcan
-
-                    @can('inquiry-list')
-                    <li class="nav-item">
-                        <a href="{{ route('backend.inquiries.index') }}" class="nav-link @isset($asideSelected) @if($asideSelected == 'inquiries') active @endif @endisset">
-                            <i class="nav-icon fas fa-paper-plane"></i>
-                            <p>
-                                Inquiries
-                            </p>
-                        </a>
-                    </li>
-                    @endcan
-
-                    @can('subscriber-list')
-                    <li class="nav-item">
-                        <a href="{{ route('backend.subscribers.index') }}" class="nav-link @isset($asideSelected) @if($asideSelected == 'subscribers') active @endif @endisset">
-                            <i class="nav-icon fas fa-envelope-square"></i>
-                            <p>
-                                Subscribers
-                            </p>
-                        </a>
-                    </li>
-                    @endcan
 
                     <li class="nav-header">GENERAL</li>
-
-                    @can('categories-list')
-                    <li class="nav-item">
-                        <a href="{{ route('backend.categories.index') }}" class="nav-link @isset($asideSelected) @if($asideSelected == 'categories') active @endif @endisset">
-                            <i class="nav-icon fas fa-list"></i>
-                            <p>
-                                Categories
-                            </p>
-                        </a>
-                    </li>
-                    @endcan
-
-                    @can('tags-list')
-                    <li class="nav-item">
-                        <a href="{{ route('backend.tags.index') }}" class="nav-link @isset($asideSelected) @if($asideSelected == 'tags') active @endif @endisset">
-                            <i class="nav-icon fas fa-tags"></i>
-                            <p>
-                                Tags
-                            </p>
-                        </a>
-                    </li>
-                    @endcan
-
-                    @can('position-list')
-                    <li class="nav-item">
-                        <a href="{{ route('backend.positions.index') }}" class="nav-link @isset($asideSelected) @if($asideSelected == 'positions') active @endif @endisset">
-                            <i class="nav-icon fas fa-graduation-cap"></i>
-                            <p>
-                                Positions
-                            </p>
-                        </a>
-                    </li>
-                    @endcan
 
                     <?php 
                         $canUsers = auth()->user()->can('user-list');
@@ -236,29 +103,6 @@
                     </li>
                     @endcan
 
-                    <li class="nav-header">DUMMIES</li>
-
-                    @can('product-list')
-                    <li class="nav-item">
-                        <a href="{{ route('backend.products.index') }}" class="nav-link @isset($asideSelected) @if($asideSelected == 'products') active @endif @endisset">
-                            <i class="nav-icon fas fa-briefcase"></i>
-                            <p>
-                                Products
-                            </p>
-                        </a>
-                    </li>
-                    @endcan
-
-                    @can('dummies-list')
-                    <li class="nav-item">
-                        <a href="{{ route('backend.dummies.index') }}" class="nav-link @isset($asideSelected) @if($asideSelected == 'dummies') active @endif @endisset">
-                            <i class="nav-icon fas fa-briefcase"></i>
-                            <p>
-                                Dummies
-                            </p>
-                        </a>
-                    </li>
-                    @endcan
                 </ul>
             </nav>
             <!-- /.sidebar-menu -->

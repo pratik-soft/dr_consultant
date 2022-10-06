@@ -61,13 +61,6 @@
         <h6>Team</h6>                                            
     </div>
 @endif
-@if (strpos($value->name, 'patient-') !== false && !in_array('patient-', $rolePrefixes))
-    @php ($rolePrefixes[] = 'patient-')
-    <div class="col-md-12 text-secondary">
-        <hr>
-        <h6>Patient</h6>                                            
-    </div>
-@endif
 @if (strpos($value->name, 'testimonial-') !== false && !in_array('testimonial-', $rolePrefixes))
     @php ($rolePrefixes[] = 'testimonial-')
     <div class="col-md-12 text-secondary">
