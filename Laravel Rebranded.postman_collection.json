@@ -1,0 +1,112 @@
+{
+	"info": {
+		"_postman_id": "34be1ae9-64b0-49b3-ac61-ea7ea2c4ec44",
+		"name": "Laravel Rebranded",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13605890"
+	},
+	"item": [
+		{
+			"name": "V1- Welcome GET",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/laravel_rebranded/api/v1/welcome",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"laravel_rebranded",
+						"api",
+						"v1",
+						"welcome"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "V1 - Add Data - POST",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"mahekV1@2excel.com.au\",\r\n    \"password\": \"Mahek@V1\",\r\n    \"device_uuid\":\"12234556\",\r\n    \"device_name\":\"iPhone11\",\r\n    \"device_token\":\"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/laravel_rebranded/api/v1/addData",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"laravel_rebranded",
+						"api",
+						"v1",
+						"addData"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "V2 - Add Data",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"mahekV2@2excel.com.au\",\r\n    \"password\": \"Mahek@V2\",\r\n    \"device_uuid\":\"12234556\",\r\n    \"device_name\":\"iPhone11\",\r\n    \"device_token\":\"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/laravel_rebranded/api/v2/addData",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"laravel_rebranded",
+						"api",
+						"v2",
+						"addData"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "V2 - welcome - GET",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/laravel_rebranded/api/v2/welcome",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"laravel_rebranded",
+						"api",
+						"v2",
+						"welcome"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

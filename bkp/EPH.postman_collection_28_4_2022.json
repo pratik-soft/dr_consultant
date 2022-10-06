@@ -1,0 +1,4575 @@
+{
+	"info": {
+		"_postman_id": "dd64344f-5ac9-4e8c-83ce-b170b26e8dfc",
+		"name": "EPH",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Client",
+			"item": [
+				{
+					"name": "create-client",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "c1h1 owner ",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "61 418713",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "avatar",
+									"type": "file",
+									"src": []
+								},
+								{
+									"key": "horse_name",
+									"value": "H3",
+									"type": "text"
+								},
+								{
+									"key": "horse_avatar",
+									"type": "file",
+									"src": []
+								},
+								{
+									"key": "breed",
+									"value": "B",
+									"type": "text"
+								},
+								{
+									"key": "gender",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "discipline",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "vet_name",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "vet_number",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "ownership_amount",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}client",
+							"host": [
+								"{{URL}}client"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "read-client",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}client",
+							"host": [
+								"{{URL}}client"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "client-delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "client_id",
+									"value": "179",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}client-delete",
+							"host": [
+								"{{URL}}client-delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "client-edit",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "client_id",
+									"value": "312",
+									"description": "128",
+									"type": "text"
+								},
+								{
+									"key": "horse_id",
+									"value": "212",
+									"description": "141",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}client-edit",
+							"host": [
+								"{{URL}}client-edit"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "client-update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "client_id",
+									"value": "424",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "Dev ddd",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "9877712345",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "Ahmedabad",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "avatar",
+									"type": "file",
+									"src": "/C:/Users/Dell/Pictures/EPH/avtar5.jpg"
+								},
+								{
+									"key": "avatar_uri",
+									"value": "\"\"",
+									"type": "text"
+								},
+								{
+									"key": "ownership_amount",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "horse_id",
+									"value": "212",
+									"description": "212",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}client-update",
+							"host": [
+								"{{URL}}client-update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "client-detail",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "client_id",
+									"value": "221",
+									"description": "275",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}client-detail",
+							"host": [
+								"{{URL}}client-detail"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add-additional-client",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "horse_id",
+									"value": "317",
+									"description": "197 158",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "C3",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "61 418713",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "Ahmedabad",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "avatar",
+									"type": "file",
+									"src": "/C:/Users/Dell/Pictures/EPH/horse_avatar_7.jpg"
+								},
+								{
+									"key": "ownership_amount",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "client_id",
+									"value": "404",
+									"description": "optional",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}add-additional-client",
+							"host": [
+								"{{URL}}add-additional-client"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "horse-list-search",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "client_id",
+									"value": "312",
+									"description": "local 275 276 305 (95 - 312)",
+									"type": "text"
+								},
+								{
+									"key": "search_key",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}horse-list-search",
+							"host": [
+								"{{URL}}horse-list-search"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "client-list-search",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "search_key",
+									"value": "10",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}client-list-search",
+							"host": [
+								"{{URL}}client-list-search"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Horse",
+			"item": [
+				{
+					"name": "create-horse",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "client_id",
+									"value": "125",
+									"type": "text"
+								},
+								{
+									"key": "horse_name",
+									"value": "d1h1",
+									"type": "text"
+								},
+								{
+									"key": "horse_avatar",
+									"type": "file",
+									"src": []
+								},
+								{
+									"key": "breed",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "gender",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "discipline",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "ownership_amount",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "vet_name",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "vet_number",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}horse",
+							"host": [
+								"{{URL}}horse"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "read-horse",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}horse",
+							"host": [
+								"{{URL}}horse"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "horse-detail",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "client_id",
+									"value": "332",
+									"description": "104,332",
+									"type": "text"
+								},
+								{
+									"key": "horse_id",
+									"value": "280",
+									"description": "133, 280",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}horse-detail",
+							"host": [
+								"{{URL}}horse-detail"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "horse-delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "horse_id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}horse-delete",
+							"host": [
+								"{{URL}}horse-delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "horse-edit",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "horse_id",
+									"value": "151",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}horse-edit",
+							"host": [
+								"{{URL}}horse-edit"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "horse-update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "horse_id",
+									"value": "151",
+									"type": "text"
+								},
+								{
+									"key": "horse_name",
+									"value": "New-horse1",
+									"type": "text"
+								},
+								{
+									"key": "breed",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "gender",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "discipline",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "horse_avatar",
+									"type": "file",
+									"src": "/C:/Users/Dell/Pictures/EPH/horse_avatar_1.jpg"
+								},
+								{
+									"key": "client_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "horse_avatar_uri",
+									"value": "''",
+									"description": "'https://staging.2excel.com.au/EPH/storage/app/public/clients/96v6lZ2agiHaxs3wvzGNe4YyMthpoK12UBC69XrP.jpg'",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}horse-update",
+							"host": [
+								"{{URL}}horse-update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add-horse-session",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "horse_id",
+									"value": "135",
+									"type": "text"
+								},
+								{
+									"key": "date",
+									"value": "10/12/2021",
+									"type": "text"
+								},
+								{
+									"key": "time",
+									"value": "02:45",
+									"type": "text"
+								},
+								{
+									"key": "end_time",
+									"value": "03:50",
+									"type": "text"
+								},
+								{
+									"key": "product_id",
+									"value": "80",
+									"type": "text"
+								},
+								{
+									"key": "device_type",
+									"value": "android",
+									"description": "android, ios",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}add-horse-session",
+							"host": [
+								"{{URL}}add-horse-session"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "horse-next-session",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "horse_id",
+									"value": "133",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}horse-next-session",
+							"host": [
+								"{{URL}}horse-next-session"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "horse-session-list-for-calendar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}horse-session-list-for-calendar",
+							"host": [
+								"{{URL}}horse-session-list-for-calendar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add Event new using Bareer Token Copy",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true,
+							"accept-encoding": true,
+							"connection": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"end\": {\r\n    \"date\": \"2021-09-10\"\r\n  },\r\n  \"start\": {\r\n    \"date\": \"2021-09-10\"\r\n  },\r\n  \"summary\": \"Test Event1 by Dhaval\",\r\n  \"description\": \"Lorem ipsum event 1 g calendar\"\r\n}\r\n"
+						},
+						"url": {
+							"raw": "https://www.googleapis.com/calendar/v3/calendars/2excelprogrammer@gmail.com/events",
+							"protocol": "https",
+							"host": [
+								"www",
+								"googleapis",
+								"com"
+							],
+							"path": [
+								"calendar",
+								"v3",
+								"calendars",
+								"2excelprogrammer@gmail.com",
+								"events"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "horse-history-session-report-pdf",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "after_session_id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}horse-history-session-report-pdf",
+							"host": [
+								"{{URL}}horse-history-session-report-pdf"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Horse session",
+			"item": [
+				{
+					"name": "add-horse-session-after-booking-created",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "date",
+									"value": "18/01/2022",
+									"type": "text"
+								},
+								{
+									"key": "time",
+									"value": "03:04",
+									"type": "text"
+								},
+								{
+									"key": "end_time",
+									"value": "03:56",
+									"type": "text"
+								},
+								{
+									"key": "product_id",
+									"value": "100",
+									"type": "text"
+								},
+								{
+									"key": "quantity",
+									"value": "2",
+									"description": "android, ios",
+									"type": "text"
+								},
+								{
+									"key": "client_id",
+									"value": "309",
+									"type": "text"
+								},
+								{
+									"key": "horse_id",
+									"value": "[264]",
+									"type": "text"
+								},
+								{
+									"key": "device_type",
+									"value": "ios",
+									"type": "text"
+								},
+								{
+									"key": "session_report_comment",
+									"value": "Carried out regular maintenance Trim on Quilpy, you will see on the \ndiagram what a fairly health hoof looks like compared to Quilpys hoof. We had excessive bars and wall that has now been removed, also on the dorsal wall was some seedy toe cracks.",
+									"type": "text"
+								},
+								{
+									"key": "horse_diagram_old",
+									"value": "https://staging.2excel.com.au/EPH/storage/app/public/master_diagram/46364508ef950a420495c6a40b202dd606f1fcb4.jpg",
+									"type": "text"
+								},
+								{
+									"key": "horse_diagram_uri",
+									"value": "https://staging.2excel.com.au/EPH/storage/app/public/master_diagram/19171975773280288630adc4b128400ebbc54ef6.jpg",
+									"type": "text"
+								},
+								{
+									"key": "horse_image_old",
+									"value": "https://staging.2excel.com.au/EPH/storage/app/public/horse/87jeRf2pwBd9MkwwOQ4Ja1tuY4y6a0dgZ7xedE5u.jpg",
+									"type": "text"
+								},
+								{
+									"key": "horse_image_uri",
+									"value": "https://staging.2excel.com.au/EPH/storage/app/public/horse/76aedabc3a85a27f06484fbe03de2cf1ca112c90.jpg",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}add-horse-session-after-booking-created",
+							"host": [
+								"{{URL}}add-horse-session-after-booking-created"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "horse-next-session",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "horse_id",
+									"value": "264",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}horse-next-session",
+							"host": [
+								"{{URL}}horse-next-session"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "All Report",
+			"item": [
+				{
+					"name": "all-report-list-data",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "report_type",
+									"value": "treatment",
+									"description": "invoice,  treatment, expense, logbook",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}all-report-list-data",
+							"host": [
+								"{{URL}}all-report-list-data"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "horse-report-list",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "horse_id",
+									"value": "141",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}horse-report-list",
+							"host": [
+								"{{URL}}horse-report-list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "all-report-search",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "start_date",
+									"value": "",
+									"description": "01/07/2021",
+									"type": "text"
+								},
+								{
+									"key": "end_date",
+									"value": "",
+									"description": "12/08/2021, today's date",
+									"type": "text"
+								},
+								{
+									"key": "search_value",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "report_type",
+									"value": "treatment",
+									"description": "invoice,  treatment, expense, logbook",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}all-report-search",
+							"host": [
+								"{{URL}}all-report-search"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "all-report-download-pdf",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "start_date",
+									"value": "",
+									"description": "01/11/2021",
+									"type": "text"
+								},
+								{
+									"key": "end_date",
+									"value": "",
+									"description": "30/11/2021",
+									"type": "text"
+								},
+								{
+									"key": "search_value",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "report_type",
+									"value": "treatment",
+									"description": "invoice,  treatment, expense, logbook",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}all-report-download-pdf",
+							"host": [
+								"{{URL}}all-report-download-pdf"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "all-report-detail-view",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "report_type",
+									"value": "expense",
+									"description": "invoice,  treatment, expense, logbook",
+									"type": "text"
+								},
+								{
+									"key": "report_id",
+									"value": "196",
+									"description": "67, 80, 86",
+									"type": "text"
+								},
+								{
+									"key": "pdf_path",
+									"value": "1",
+									"description": "1 = Return PDF Path, 0 = Return Data",
+									"type": "text"
+								},
+								{
+									"key": "tax_agent_email",
+									"value": "2excelmail21@gmail.com",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "",
+									"value": "",
+									"description": "logbook 22 , exp 196 , invoice 181 treatment 21",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}all-report-detail-view",
+							"host": [
+								"{{URL}}all-report-detail-view"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "download-horse-history-report",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{URL}}treatment-record-pdf-generate",
+							"host": [
+								"{{URL}}treatment-record-pdf-generate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "all-report-download-details-pdf",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "report_type",
+									"value": "logbook",
+									"description": "invoice,  treatment, expense, logbook",
+									"type": "text"
+								},
+								{
+									"key": "report_id",
+									"value": "22",
+									"description": "67, 80, 86",
+									"type": "text"
+								},
+								{
+									"key": "",
+									"value": "",
+									"description": "logbook 22 , exp 196 , invoice 181 tretment 21",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}all-report-download-details-pdf",
+							"host": [
+								"{{URL}}all-report-download-details-pdf"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Treatment Report",
+			"item": [
+				{
+					"name": "add-treatment-report",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "client_id",
+									"value": "323",
+									"description": "local - 41 live - 61-65  , 106",
+									"type": "text"
+								},
+								{
+									"key": "horse_id",
+									"value": "[271]",
+									"description": "local - 56.57 live - 83,84 139",
+									"type": "text"
+								},
+								{
+									"key": "product_id",
+									"value": "145",
+									"description": "145",
+									"type": "text"
+								},
+								{
+									"key": "notes",
+									"value": "this is notes",
+									"type": "text"
+								},
+								{
+									"key": "horse_rasing_name",
+									"value": "stome",
+									"type": "text"
+								},
+								{
+									"key": "date_of_treatment",
+									"value": "24/01/2022",
+									"type": "text"
+								},
+								{
+									"key": "treatment_administered",
+									"value": "penicilin",
+									"type": "text"
+								},
+								{
+									"key": "route_administered",
+									"value": "iv",
+									"type": "text"
+								},
+								{
+									"key": "dosage",
+									"value": "1200mcg",
+									"type": "text"
+								},
+								{
+									"key": "person_administered",
+									"value": "John Smith",
+									"type": "text"
+								},
+								{
+									"key": "prescribing_person",
+									"value": "Shaun Tucker1",
+									"type": "text"
+								},
+								{
+									"key": "signature",
+									"type": "file",
+									"src": "/C:/Users/Dell/Pictures/EPH/signature.jpg"
+								},
+								{
+									"key": "horse_diagram",
+									"type": "file",
+									"src": "/C:/Users/Dell/Pictures/EPH/horse diagram.png"
+								},
+								{
+									"key": "horse_video",
+									"type": "file",
+									"src": "/C:/Users/Dell/Pictures/EPH/horse_avatar_4.jpg"
+								},
+								{
+									"key": "treatment_diagram",
+									"type": "file",
+									"src": "/C:/Users/Dell/Pictures/EPH/horse_avatar_3.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}add-treatment-report",
+							"host": [
+								"{{URL}}add-treatment-report"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "treatment-report-details",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "treatment_record_id",
+									"value": "85",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}treatment-report-details",
+							"host": [
+								"{{URL}}treatment-report-details"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "treatment-record-pdf-generate",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{URL}}treatment-record-pdf-generate",
+							"host": [
+								"{{URL}}treatment-record-pdf-generate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "search-treatment-record",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "start_date",
+									"value": "01/07/2021",
+									"type": "text"
+								},
+								{
+									"key": "end_date",
+									"value": "31/12/2021",
+									"type": "text"
+								},
+								{
+									"key": "search_value",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}search-treatment-record",
+							"host": [
+								"{{URL}}search-treatment-record"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Session Report",
+			"item": [
+				{
+					"name": "session-report-save-preview-image",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "book_appointment_id",
+									"value": "141",
+									"type": "text"
+								},
+								{
+									"key": "session_report_id",
+									"value": "193",
+									"type": "text"
+								},
+								{
+									"key": "horse_image_old",
+									"type": "file",
+									"src": "/C:/Users/Dell/Pictures/EPH/diagram 2.jpg"
+								},
+								{
+									"key": "without_booking",
+									"value": "1",
+									"description": "1= without_booking , 0 = withbooking",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}session-report-save-preview-image",
+							"host": [
+								"{{URL}}session-report-save-preview-image"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add-session-report-details",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "book_appointment_id",
+									"value": "518",
+									"description": "141",
+									"type": "text"
+								},
+								{
+									"key": "session_report_comment",
+									"value": "Carried out regular maintenance Trim on Quilpy, you will see on the \ndiagram what a fairly health hoof looks like compared to Quilpys hoof. We had excessive bars and wall that has now been removed, also on the dorsal wall was some seedy toe cracks.",
+									"type": "text"
+								},
+								{
+									"key": "session_report_id",
+									"value": "167",
+									"description": "167 215",
+									"type": "text"
+								},
+								{
+									"key": "horse_diagram_old",
+									"value": "",
+									"description": "https://staging.2excel.com.au/EPH/storage/app/public/master_diagram/46364508ef950a420495c6a40b202dd606f1fcb4.jpg",
+									"type": "text"
+								},
+								{
+									"key": "horse_diagram_uri",
+									"value": "",
+									"description": "http://localhost/eph/public/images/photo_2.jpg",
+									"type": "text"
+								},
+								{
+									"key": "horse_image_old",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "horse_image_uri",
+									"value": "https://staging.2excel.com.au/EPH/storage/app/public/horse/76aedabc3a85a27f06484fbe03de2cf1ca112c90.jpg",
+									"type": "text"
+								},
+								{
+									"key": "horse_video",
+									"type": "file",
+									"src": "/C:/Users/Dell/Pictures/EPH/sample video ee.mp4"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}add-session-report-details",
+							"host": [
+								"{{URL}}add-session-report-details"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "send-session-report",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "session_report_id",
+									"value": "167",
+									"description": "local 84 live 124 215",
+									"type": "text"
+								},
+								{
+									"key": "is_preview",
+									"value": "1",
+									"description": "1 - preview 0 -send",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}send-session-report",
+							"host": [
+								"{{URL}}send-session-report"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User Settings",
+			"item": [
+				{
+					"name": "add-user-subscription-details",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"currency\": \"INR\",\r\n\"deviceType\": \"ios\",\r\n\"localizedPrice\": \"₹1,075.77\",\r\n\"originalTransactionDateIOS\": \"1632716822000\",\r\n\"originalTransactionIdentifierIOS\": \"1000000883713900\",\r\n\"productId\": \"1_month_auto_subscription\",\r\n\"transactionDate\": 1632897701000,\r\n\"transactionId\": \"1000000885168084\",\r\n\"transactionReceipt\": \"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\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}add-user-subscription-details",
+							"host": [
+								"{{URL}}add-user-subscription-details"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FAQ List",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {},
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{URL}}faq-list",
+							"host": [
+								"{{URL}}faq-list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "terms-and-conditions",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {},
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{URL}}terms-and-conditions",
+							"host": [
+								"{{URL}}terms-and-conditions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "diagram-list",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{URL}}diagram-list",
+							"host": [
+								"{{URL}}diagram-list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "master-diagram",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "master_diagram",
+									"type": "file",
+									"src": "/C:/Users/Dell/Pictures/EPH/diagram 2.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}master-diagram",
+							"host": [
+								"{{URL}}master-diagram"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "problem-suggestion",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "problem_suggestion",
+									"value": "Problem 1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}problem-suggestion",
+							"host": [
+								"{{URL}}problem-suggestion"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Logbook",
+			"item": [
+				{
+					"name": "add-logbook-record",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "source",
+									"value": "Thaltej,gujarat",
+									"type": "text"
+								},
+								{
+									"key": "start_location",
+									"value": "{\"latitude\":23.0757184,\"longitude\":72.5090366,\"latitudeDelta\":0.05,\"longitudeDelta\":0.023102678571428573}",
+									"type": "text"
+								},
+								{
+									"key": "destination",
+									"value": "sagrasan, gujarat",
+									"type": "text"
+								},
+								{
+									"key": "end_location",
+									"value": "{\"latitude\":23.0714235,\"longitude\":72.5167854,\"latitudeDelta\":0.05,\"longitudeDelta\":0.023102678571428573}",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "Business",
+									"type": "text"
+								},
+								{
+									"key": "comments",
+									"value": "test logbook",
+									"type": "text"
+								},
+								{
+									"key": "distance",
+									"value": "20",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}add-logbook-record",
+							"host": [
+								"{{URL}}add-logbook-record"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logbook Data List",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{URL}}logbook-record-list",
+							"host": [
+								"{{URL}}logbook-record-list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logbook-record-pdf-generate",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{URL}}logbook-record-pdf-generate",
+							"host": [
+								"{{URL}}logbook-record-pdf-generate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logbook-details-popupview",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "logbook_id",
+									"value": "6",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}logbook-details-popupview",
+							"host": [
+								"{{URL}}logbook-details-popupview"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Invoice",
+			"item": [
+				{
+					"name": "add-invoice-category",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "category_name",
+									"value": "category 4",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}add-invoice-category",
+							"host": [
+								"{{URL}}add-invoice-category"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "invoice-category-list",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}invoice-category-list",
+							"host": [
+								"{{URL}}invoice-category-list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add-invoice",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "client_id",
+									"value": "0004",
+									"type": "text"
+								},
+								{
+									"key": "horse_id",
+									"value": "Graps",
+									"type": "text"
+								},
+								{
+									"key": "cost",
+									"value": "2.6",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}add-invoice",
+							"host": [
+								"{{URL}}add-invoice"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "save-invoice-details",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "client_id",
+									"value": "142",
+									"description": "174",
+									"type": "text"
+								},
+								{
+									"key": "horse_id",
+									"value": "137",
+									"description": "158, 366",
+									"type": "text"
+								},
+								{
+									"key": "additional_client_ids",
+									"value": "[142]",
+									"description": "[174, 175,176,177,178] 107, 467",
+									"type": "text"
+								},
+								{
+									"key": "booking_appointment_id",
+									"value": "662",
+									"description": "[optional] 140",
+									"type": "text"
+								},
+								{
+									"key": "invoice_item",
+									"value": "[{\"product_name\":\"product 1\",\"product_desc\":\"Product 1 description\",\"quantity\":1,\"product_unit_price\":\"100.00\",\"with_tax\":0,\"discount_per\":0},{\"product_name\":\"product 2\",\"product_desc\":\"test desc\",\"quantity\":1,\"product_unit_price\":\"45.00\",\"with_tax\":0,\"discount_per\":0},{\"product_name\":\"product 3\",\"product_desc\":\"test \",\"quantity\":1,\"product_unit_price\":\"35.00\",\"with_tax\":0,\"discount_per\":0}]",
+									"description": "[{\"product_name\":\"New Product\",\"quantity\":1,\"product_unit_price\":10,\"total_amount\":10},{\"product_name\":\"Prod 2\",\"quantity\":2,\"product_unit_price\":5,\"total_amount\":10},{\"product_name\":\"\",\"quantity\":\"\",\"product_unit_price\":\"Total: \",\"total_amount\":20}]",
+									"type": "text"
+								},
+								{
+									"key": "invoice_update_id",
+									"value": "402",
+									"description": "[optional] 310 402",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}save-invoice-details",
+							"host": [
+								"{{URL}}save-invoice-details"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "send-invoice-clients",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "invoice_id",
+									"value": "181",
+									"description": "187, 181,193, 148,  319",
+									"type": "text"
+								},
+								{
+									"key": "client_id",
+									"value": "107",
+									"description": "104, 305, 107",
+									"type": "text"
+								},
+								{
+									"key": "",
+									"value": "",
+									"description": "305 270",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}send-invoice-clients",
+							"host": [
+								"{{URL}}send-invoice-clients"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "share-invoice-to-clients",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "invoice_id",
+									"value": "181",
+									"description": "181",
+									"type": "text"
+								},
+								{
+									"key": "client_id",
+									"value": "107",
+									"description": "106",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}share-invoice-to-clients",
+							"host": [
+								"{{URL}}share-invoice-to-clients"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "invoice-paid-manually",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "invoice_id",
+									"value": "37",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}invoice-paid-manually",
+							"host": [
+								"{{URL}}invoice-paid-manually"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List invoices",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{URL}}invoice-list",
+							"host": [
+								"{{URL}}invoice-list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "horsewise-invoice-list",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "horse_id",
+									"value": "141",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}horsewise-invoice-list",
+							"host": [
+								"{{URL}}horsewise-invoice-list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "client-invoice-details",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "invoice_id",
+									"value": "402",
+									"description": "203",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}client-invoice-details",
+							"host": [
+								"{{URL}}client-invoice-details"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "send-invoice-by-sms",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "invoice_id",
+									"value": "181",
+									"type": "text"
+								},
+								{
+									"key": "client_id",
+									"value": "107",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}send-invoice-by-sms",
+							"host": [
+								"{{URL}}send-invoice-by-sms"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Expense",
+			"item": [
+				{
+					"name": "add-expense-entry",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "expense_date",
+									"value": "24/02/2022",
+									"type": "text"
+								},
+								{
+									"key": "invoice_category_id",
+									"value": "97",
+									"description": " 2, 41",
+									"type": "text"
+								},
+								{
+									"key": "inc_tax",
+									"value": "10.50",
+									"type": "text"
+								},
+								{
+									"key": "total_expense",
+									"value": "17",
+									"description": "17",
+									"type": "text"
+								},
+								{
+									"key": "invoice_items",
+									"value": "[{\"item_name\":\"product 2\",\"item_cost\":2.0},{\"item_name\":\"product 2\",\"item_cost\":6.5},{\"item_name\":\"product 3\",\"item_cost\":7.57}]",
+									"description": "Manual Invoice Entry",
+									"type": "text"
+								},
+								{
+									"key": "expense_invoice_image",
+									"type": "file",
+									"src": "/C:/Users/Dell/Pictures/EPH/invoice image.png",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}add-expense-entry",
+							"host": [
+								"{{URL}}add-expense-entry"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "expense-invoice-list",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{URL}}expense-invoice-list",
+							"host": [
+								"{{URL}}expense-invoice-list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "save-expense-invoice-pdf",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{URL}}save-expense-invoice-pdf",
+							"host": [
+								"{{URL}}save-expense-invoice-pdf"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "expense-invoice-details",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "invoice_expense_id",
+									"value": "265",
+									"description": "196 , 278",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}expense-invoice-details",
+							"host": [
+								"{{URL}}expense-invoice-details"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "After Session",
+			"item": [
+				{
+					"name": "add-after-session-details",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "book_appointment_id",
+									"value": "589",
+									"description": "141",
+									"type": "text"
+								},
+								{
+									"key": "booking_status",
+									"value": "Re-Booked",
+									"description": "Attended, Re-Booked, cancelled",
+									"type": "text"
+								},
+								{
+									"key": "send_invoice_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "send_session_report_id",
+									"value": "292",
+									"type": "text"
+								},
+								{
+									"key": "after_session_notes",
+									"value": "After session notes",
+									"type": "text"
+								},
+								{
+									"key": "is_session_complete",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "session_report_id",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}add-after-session-details",
+							"host": [
+								"{{URL}}add-after-session-details"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "after-session-invoice-session-details",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "client_id",
+									"value": "81",
+									"description": "246 live 81",
+									"type": "text"
+								},
+								{
+									"key": "horse_id",
+									"value": "111",
+									"description": "133 live 111",
+									"type": "text"
+								},
+								{
+									"key": "invoice_id",
+									"value": "",
+									"description": "15 (optional)",
+									"type": "text"
+								},
+								{
+									"key": "booking_appointment_id",
+									"value": "437",
+									"description": "124 141 live 437",
+									"type": "text"
+								},
+								{
+									"key": "session_id",
+									"value": "",
+									"description": "29 (optional) 120",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}after-session-invoice-session-details",
+							"host": [
+								"{{URL}}after-session-invoice-session-details"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "additional-client-list",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "horse_id",
+									"value": "366",
+									"description": "133",
+									"type": "text"
+								},
+								{
+									"key": "client_id",
+									"value": "467",
+									"description": "104",
+									"type": "text"
+								},
+								{
+									"key": "booking_appointment_id",
+									"value": "656",
+									"description": "141",
+									"type": "text"
+								},
+								{
+									"key": "invoice_id",
+									"value": "396",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}additional-client-list",
+							"host": [
+								"{{URL}}additional-client-list"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "create-product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "number",
+									"value": "0035",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "Product 6",
+									"type": "text"
+								},
+								{
+									"key": "cost",
+									"value": "50.55",
+									"type": "text"
+								},
+								{
+									"key": "product_description",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "discount_per",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "with_tax",
+									"value": "1",
+									"description": "1 -with tax,  0 without tax",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}product",
+							"host": [
+								"{{URL}}product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "last product ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{URL}}last-product-added",
+							"host": [
+								"{{URL}}last-product-added"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "edit-product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "product_id",
+									"value": "80",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}edit-product",
+							"host": [
+								"{{URL}}edit-product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update-product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "product_id",
+									"value": "80",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "Prod1",
+									"type": "text"
+								},
+								{
+									"key": "product_description",
+									"value": "Prod1 desc",
+									"type": "text"
+								},
+								{
+									"key": "discount_per",
+									"value": "5.12",
+									"type": "text"
+								},
+								{
+									"key": "with_tax",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "cost",
+									"value": "100",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}update-product",
+							"host": [
+								"{{URL}}update-product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "read-product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}product",
+							"host": [
+								"{{URL}}product"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Logout",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "{{URL}}logout",
+					"host": [
+						"{{URL}}logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var data = JSON.parse(responseBody);\r",
+							"console.log(data);\r",
+							"pm.environment.set(\"token\", data.access_token);\r",
+							"pm.environment.set(\"refresh_token\", data.refresh_token);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "dhaval@2excel.com.au",
+							"description": "dhaval@2excel.com.au  2exceltest2@gmail.com 2exceltest3@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "Test@123",
+							"description": "Test@123, Qwe123@,  Qwer1234@ Ramnik12@ 2exceltest1@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "device_token",
+							"value": "B4JeHHHog_Hi2WekVZbNZu6glSu1ahizHGbL",
+							"description": "pooja@2excel.com.au  jack@2excel.com.au",
+							"type": "text"
+						},
+						{
+							"key": "uuid",
+							"value": "112333",
+							"description": "2exceltest1@gmail.com  Ramnik12@",
+							"type": "text"
+						},
+						{
+							"key": "device_type",
+							"value": "Android",
+							"description": "dhaval@mailinator.com",
+							"type": "text"
+						},
+						{
+							"key": "device_name",
+							"value": "oneplus",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{URL}}auth/login",
+					"host": [
+						"{{URL}}auth"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "multipart/form-data"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "avatar",
+							"type": "file",
+							"src": "/C:/Users/dhaval/OneDrive/Pictures/Avatar/avtar8.jpg"
+						},
+						{
+							"key": "name",
+							"value": "MR  JIgnesh",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "dhaval@mailinator.com",
+							"description": "myur12@yopmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "Test@123",
+							"type": "text"
+						},
+						{
+							"key": "password_confirmation",
+							"value": "Test@123",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "1234567890",
+							"type": "text"
+						},
+						{
+							"key": "device_token",
+							"value": "WL387lwo6C72anGtnJjsZzdDGOkeDZslrCTl1B4JeHHHog_Hi2WekVZbNZu6glSu1ahizHGbLPYMJ-e2XJNDOpfde6DBsWlER0",
+							"type": "text"
+						},
+						{
+							"key": "uuid",
+							"value": "112333",
+							"type": "text"
+						},
+						{
+							"key": "device_type",
+							"value": "Android",
+							"type": "text"
+						},
+						{
+							"key": "device_name",
+							"value": "oppo",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{URL}}register",
+					"host": [
+						"{{URL}}register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add User Settings",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Pooja",
+							"description": "Mr Dhaval",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "pooja.panchal@2excel.com.au",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "9078912345",
+							"type": "text"
+						},
+						{
+							"key": "avatar",
+							"type": "file",
+							"src": "/C:/Users/dhaval/OneDrive/Pictures/Avatar/avtar15.png"
+						},
+						{
+							"key": "avatar_uri",
+							"value": "''",
+							"type": "text"
+						},
+						{
+							"key": "business_logo",
+							"type": "file",
+							"src": "/C:/Users/Dell/Pictures/EPH/business_logo3.png"
+						},
+						{
+							"key": "business_logo_uri",
+							"value": "''",
+							"type": "text"
+						},
+						{
+							"key": "business_name",
+							"value": "Pqrs PVT LTD",
+							"type": "text"
+						},
+						{
+							"key": "business_contact_no",
+							"value": "0123456789",
+							"type": "text"
+						},
+						{
+							"key": "business_address",
+							"value": "Ahmedabad",
+							"type": "text"
+						},
+						{
+							"key": "business_abn_number",
+							"value": "abn0111",
+							"type": "text"
+						},
+						{
+							"key": "business_email",
+							"value": "suplehand@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "bank_bsb_no",
+							"value": "BSB12213311",
+							"type": "text"
+						},
+						{
+							"key": "bank_account_no",
+							"value": "SBI001222",
+							"type": "text"
+						},
+						{
+							"key": "bussiness_details_available",
+							"value": "true",
+							"type": "text"
+						},
+						{
+							"key": "invoice_reminder",
+							"value": "1 Month",
+							"type": "text"
+						},
+						{
+							"key": "invoice_start_number",
+							"value": "1111",
+							"type": "text"
+						},
+						{
+							"key": "kilometer_rate",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "link_account",
+							"value": "0",
+							"description": "0 - not link,  1 - linked",
+							"type": "text"
+						},
+						{
+							"key": "invoice_payment_instructions",
+							"value": "Please, pay invoice by 15/02/2022",
+							"type": "text"
+						},
+						{
+							"key": "invoice_default_notes",
+							"value": "Please,  quote invoice number or Remitter advice on 15/02/2022",
+							"type": "text"
+						},
+						{
+							"key": "is_24hourformat",
+							"value": "false",
+							"type": "text"
+						},
+						{
+							"key": "tax_per",
+							"value": "10.50",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{URL}}add-user-settings",
+					"host": [
+						"{{URL}}add-user-settings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user-details",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {},
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "{{URL}}user-details",
+					"host": [
+						"{{URL}}user-details"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "link-user-google-account",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "poojapanchal2502@gmail.com",
+							"description": "pooja@2excel.com.au",
+							"type": "text"
+						},
+						{
+							"key": "server_auth_code",
+							"value": "4/0AX4XfWhWPUA_KLHb9a2DeRpburoyZKIALm8lUW1mcvM6bZk33IkXokwo0cbuNtosNaLRpg",
+							"description": "ed88dec131c887a52b118b6cc57f7fcc36cff74a20dd4426ed686c649378ea07b6dee42f9b06c476",
+							"type": "text"
+						},
+						{
+							"key": "access_token",
+							"value": "ya29.a0ARrdaM_rvCTPUd3B47rviJLltHJ7tNwdhKwghcXyDjPkwjoYbiwdCTnFJMbt4HcSOgfJdSPoaiHKyNfLrCBG1BCCPR9ezjSvHSsmhxXwD4HNKwb9Ln53F45XMfgLQ01jQE_21EnYO2srnGWuAsdZ6DzRhPUH",
+							"description": "ya29.a0ARrdaM_rvCTPUd3B47rviJLltHJ7tNwdhKwghcXyDjPkwjoYbiwdCTnFJMbt4HcSOgfJdSPoaiHKyNfLrCBG1BCCPR9ezjSvHSsmhxXwD4HNKwb9Ln53F45XMfgLQ01jQE_21EnYO2srnGWuAsdZ6DzRhPUH",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{URL}}link-user-google-account",
+					"host": [
+						"{{URL}}link-user-google-account"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "verify2FA",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "dhaval@mailinator.com",
+							"description": "myur@yopmail.com",
+							"type": "text"
+						},
+						{
+							"key": "code",
+							"value": "760143",
+							"description": "123567",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{URL}}verify2FA",
+					"host": [
+						"{{URL}}verify2FA"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "changePassword",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "old_password",
+							"value": "Test@123",
+							"type": "text"
+						},
+						{
+							"key": "new_password",
+							"value": "Test@1234",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{URL}}changePassword",
+					"host": [
+						"{{URL}}changePassword"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "forgot-password",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "multipart/form-data",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "dhaval@2excel.com.au",
+							"description": "dhaval@2excel.com.au",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{URL}}forgot-password",
+					"host": [
+						"{{URL}}forgot-password"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "all-report-list",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "{{URL}}all-report-list",
+					"host": [
+						"{{URL}}all-report-list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Send Invoice To Clients Email template view purpose Copy",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "invoice_id",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{URL}}send-invoice-clients?invoice_id=2",
+					"host": [
+						"{{URL}}send-invoice-clients"
+					],
+					"query": [
+						{
+							"key": "invoice_id",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Email Template send Invoice",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}send-invoice-clients?invoice_id=1",
+					"host": [
+						"{{URL}}send-invoice-clients"
+					],
+					"query": [
+						{
+							"key": "invoice_id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "clientwise-horse-list",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "{{URL}}clientwise-horse-list",
+					"host": [
+						"{{URL}}clientwise-horse-list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cancel book-appointment",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "book_appointment_id",
+							"value": "312",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{URL}}cancel-book-appointment",
+					"host": [
+						"{{URL}}cancel-book-appointment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "book-appointment",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "user_id",
+							"value": "85",
+							"type": "text"
+						},
+						{
+							"key": "date",
+							"value": "03-02-2022",
+							"description": "DD-MM-YYYY",
+							"type": "text"
+						},
+						{
+							"key": "time",
+							"value": "7:40",
+							"description": "HH:MM",
+							"type": "text"
+						},
+						{
+							"key": "end_time",
+							"value": "11:50",
+							"type": "text"
+						},
+						{
+							"key": "product_id",
+							"value": "100",
+							"description": "98",
+							"type": "text"
+						},
+						{
+							"key": "quantity",
+							"value": "2",
+							"description": "2",
+							"type": "text"
+						},
+						{
+							"key": "client_id",
+							"value": "309",
+							"description": "104, 133, 309,231",
+							"type": "text"
+						},
+						{
+							"key": "horse_id",
+							"value": "[198]",
+							"description": "multipkle like 1,2,3,4 [133], 284, 264,198",
+							"type": "text"
+						},
+						{
+							"key": "is_recurring",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "occurrence_amount",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "recurring_type",
+							"value": "1",
+							"description": "1 = Days,2 = Weeks, 3 = Months, 4 = Years",
+							"type": "text"
+						},
+						{
+							"key": "device_type",
+							"value": "android",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{URL}}book-appointment",
+					"host": [
+						"{{URL}}book-appointment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "today-todo-list",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}today-todo-list",
+					"host": [
+						"{{URL}}today-todo-list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "today-todo-list-all",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}today-todo-list-all",
+					"host": [
+						"{{URL}}today-todo-list-all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "todo-list",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}todo-list",
+					"host": [
+						"{{URL}}todo-list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "todo-list-all",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}todo-list-all",
+					"host": [
+						"{{URL}}todo-list-all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "test1",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"google_subscription_response\":{\"originalTransactionDateIOS\": 1632716822000, \"originalTransactionIdentifierIOS\": \"1000000883713900\", \"productId\": \"1_month_auto_subscription\", \"quantityIOS\": 1, \"transactionDate\": 1632897701000, \"transactionId\": \"1000000885168084\", \"transactionReceipt\": \"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\"}\r\n    \"device_type\":ios,\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}test1",
+					"host": [
+						"{{URL}}test1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "test Email",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {},
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "{{URL}}test",
+					"host": [
+						"{{URL}}test"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "android-server-notification-for-subscription",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {},
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "{{URL}}android-server-notification-for-subscription",
+					"host": [
+						"{{URL}}android-server-notification-for-subscription"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "android-server-notification-for-subscription Copy",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {},
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "{{URL}}android-server-notification-for-subscription",
+					"host": [
+						"{{URL}}android-server-notification-for-subscription"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ios-server-notification-for-subscription",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {},
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "{{URL}}ios-server-notification-for-subscription",
+					"host": [
+						"{{URL}}ios-server-notification-for-subscription"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "test-data",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {},
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "{{URL}}test-data",
+					"host": [
+						"{{URL}}test-data"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cronInvoice",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {},
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "{{URL}}cronInvoice",
+					"host": [
+						"{{URL}}cronInvoice"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "download-session-report-by-qrcode",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {},
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://localhost/eph/public/api/download-session-report-by-qrcode/MTcx/ODU=",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"eph",
+						"public",
+						"api",
+						"download-session-report-by-qrcode",
+						"MTcx",
+						"ODU="
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "terms_condition",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {},
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "",
+							"value": "",
+							"description": "http://localhost/eph/public/",
+							"type": "text"
+						},
+						{
+							"key": "",
+							"value": "",
+							"description": "https://staging.2excel.com.au/EPH/public",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/eph/public/terms_condition",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"eph",
+						"public",
+						"terms_condition"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "send-invoice-clients-template",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "{{URL}}send-invoice-clients-template?invoice_id=181",
+					"host": [
+						"{{URL}}send-invoice-clients-template"
+					],
+					"query": [
+						{
+							"key": "invoice_id",
+							"value": "181"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

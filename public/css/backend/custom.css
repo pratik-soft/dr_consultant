@@ -1,0 +1,84 @@
+.btn-circle.btn-sm { 
+	width: 30px; 
+	height: 30px; 
+	padding: 6px 0px; 
+	border-radius: 15px; 	
+	text-align: center; 
+} 
+.btn-circle.btn-md { 
+	width: 50px; 
+	height: 50px; 
+	padding: 7px 10px; 
+	border-radius: 25px; 	
+	text-align: center; 
+} 
+.btn-circle.btn-xl { 
+	width: 70px; 
+	height: 70px; 
+	padding: 10px 16px; 
+	border-radius: 35px; 	
+	text-align: center; 
+} 
+
+.btn-ripple {
+	display: inline-block;
+	position: relative;
+	overflow: hidden;
+	transition: all ease-in-out .5s;
+}
+
+.btn-ripple::after {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 25%;
+	height: 100%;
+	width: 50%;
+	background-color: #000;
+	border-radius: 50%;
+	opacity: 0;
+	pointer-events: none;
+	transition: all ease-in-out 1s;
+	transform: scale(5, 5);
+}
+
+.btn-ripple:active::after {
+	padding: 0;
+	margin: 0;
+	opacity: .2;
+	transition: 0s;
+	transform: scale(0, 0);
+}
+
+div.dataTables_wrapper div.dataTables_paginate{
+	padding-top: 0.85em;
+}
+
+table.dataTable tbody tr.selected {
+    background-color: lightyellow !important;
+}
+
+.datatable_actions{
+	display: none;
+}
+
+/* table tbody tr:hover td{
+    background-color: #FFFFE0 !important;
+} */
+
+.read-column{
+	background-color: #f4f6f9 !important;
+}
+
+.pace .pace-progress{
+	height: 3px;
+}
+
+.form-group.required .col-form-label:after {
+	content:"*";
+	color:red;
+	position: absolute;
+   	margin-left: 1px;
+	margin-top: -2px;
+}
