@@ -4,14 +4,14 @@ namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\Form;
+use App\Models\AssessmentForm;
 use App\Models\PatientSymptomsFormOption;
 use DataTables;
 use Spatie\Permission\Models\Role;
 use Spatie\Permission\Models\Permission;
 use Lang;
 
-class FormController extends Controller
+class AssessmentFormController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -119,7 +119,7 @@ class FormController extends Controller
         // echo "<pre>";
         // print_r($form['question']);
         // die();
-        return view('backend.form.create');
+        return view('backend.assessmentform.create');
     }
 
     /**
@@ -142,72 +142,10 @@ class FormController extends Controller
         // echo "<pre>";
         // print_r($request->all());
         // die();
-        $form = Form::create($request->all());
+        $form = AssessmentForm::create($request->all());
         $form->save();
-
-        $patient_symptoms_form_id = $form->id;
-
-        if($request->chest_pain == 1){
-            $chest_pain_potion = array(
-                'pain_in_day'=>$request->pain_in_day,
-                'feel_pain_place'=>$request->feel_pain_place,
-                'chest_pain_d'=>$request->chest_pain_d,
-                'chest_pain_e'=>$request->chest_pain_e,
-                'chest_pain_f'=>$request->chest_pain_f,
-                'chest_pain_g'=>$request->chest_pain_g,
-            );
-        }
-
-        if($request->shortness_of_breath == 1){
-            $shortness_of_breath_potion = array(
-                'feel_sob'=>isset($request->feel_sob)?$request->feel_sob:'',
-                'shortness_of_breath_b'=>$request->shortness_of_breath_b,
-                'shortness_of_breath_c'=>$request->shortness_of_breath_c,
-                'shortness_of_breath_d'=>$request->shortness_of_breath_d,
-                'shortness_of_breath_e'=>$request->shortness_of_breath_e,
-            );
-        }
-
-        if($request->coughing == 1){
-            $coughing_potion = array(
-                'coughing_time'=>isset($request->coughing_time)?$request->coughing_time:'',
-            );
-        }
-
-        if($request->exercise == 1){
-            $exercise_potion = array(
-                'exercise_a'=>$request->exercise_a,
-                'exercise_b'=>$request->exercise_b,
-            );
-        }
-
-        if($request->medications == 1){
-            $medications_potion = array(
-                'medications_a'=>$request->medications_a,
-                'medications_b'=>$request->medications_b,
-                'medications_c'=>$request->medications_c,
-                'medications_d'=>$request->medications_d,
-                'medications_e'=>$request->medications_e,
-                'medications_f'=>$request->medications_f,
-            );
-        }
-
-        $option_data = array(
-            'chest_pain_potion' => $chest_pain_potion,
-            'shortness_of_breath_potion' => $shortness_of_breath_potion,
-            'coughing_potion' => $coughing_potion,
-            'exercise_potion' => $exercise_potion,
-            'medications_potion' => $medications_potion
-        );
-        $save_data = array(
-            'patient_symptoms_form_id' => $patient_symptoms_form_id,
-            'patient_symptoms_option' => json_encode($option_data)
-        );
-
-        $patient_symptoms_option = PatientSymptomsFormOption::create($save_data);
-        $patient_symptoms_option->save();
      
-        return redirect()->route('backend.form.index')
+        return redirect()->route('backend.assessmentform.index')
                         ->with('success','Form created successfully.');
     }
 

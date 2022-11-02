@@ -41,7 +41,7 @@
                             <a class="btn btn-success" href="{{ route('backend.form.create') }}"><i class="fas fa-plus"></i> Add</a>
                         @endcan
                         @can('form-create')
-                            <a class="btn btn-success" href="{{ route('backend.assessmentform.create') }}"><i class="fas fa-plus"></i> Add Patient Assessment</a>
+                            <a class="btn btn-success" href="{{ route('backend.form.create') }}"><i class="fas fa-plus"></i> Add Patient Assessment</a>
                         @endcan
                     </div>
                 </div>

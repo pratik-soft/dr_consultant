@@ -79,10 +79,15 @@ Route::group([], function(){
 
          
         //Users        
-         Route::get('form/delete/{id}', [App\Http\Controllers\Backend\FormController::class, 'delete'])->name('form.delete');
-         Route::post('form/list', [App\Http\Controllers\Backend\FormController::class, 'list'])->name('form.list');
-         Route::post('form/actions', [App\Http\Controllers\Backend\FormController::class, 'actions'])->name('form.actions');
-         Route::resource('form', App\Http\Controllers\Backend\FormController::class);        
- 
+        Route::get('form/delete/{id}', [App\Http\Controllers\Backend\FormController::class, 'delete'])->name('form.delete');
+        Route::post('form/list', [App\Http\Controllers\Backend\FormController::class, 'list'])->name('form.list');
+        Route::post('form/actions', [App\Http\Controllers\Backend\FormController::class, 'actions'])->name('form.actions');
+        Route::resource('form', App\Http\Controllers\Backend\FormController::class);
+
+        //Assessment form        
+        Route::get('assessmentform/delete/{id}', [App\Http\Controllers\Backend\AssessmentFormController::class, 'delete'])->name('assessmentform.delete');
+        Route::post('assessmentform/list', [App\Http\Controllers\Backend\AssessmentFormController::class, 'list'])->name('assessmentform.list');
+        Route::post('assessmentform/actions', [App\Http\Controllers\Backend\AssessmentFormController::class, 'actions'])->name('assessmentform.actions');
+        Route::resource('assessmentform', App\Http\Controllers\Backend\AssessmentFormController::class);
     });
 });
