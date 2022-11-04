@@ -35,7 +35,7 @@ Route::get('/', [App\Http\Controllers\Frontend\HomeController::class, 'index'])-
 //Backend
 Route::group([], function(){
     //login, register, forgot password, reset password
-    Auth::routes(['verify' => true, 'register' => false]);
+    Auth::routes(['verify' => true, 'register' => true]);
 
     // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
             

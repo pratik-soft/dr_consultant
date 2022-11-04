@@ -52,8 +52,10 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'name' => ['required', 'string', 'max:255'],
+            'firstname' => ['required', 'string', 'max:255'],
+            'lastname' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'phone' => ['required', 'numeric', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
     }
@@ -66,13 +68,22 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        // print_r(array('Patient'));
+        // dd($data);
         $user = User::create([
-            'name' => $data['name'],
+            'first_name' => $data['firstname'],
+            'last_name' => $data['lastname'],
             'email' => $data['email'],
-            'password' => Hash::make($data['password']),
+            'phone' => $data['phone'],
+            'password' => $data['password'],
+            'email_verified_at' => now(),
+            'status' => 1,
         ]);
 
-        $user->sendEmailVerificationNotification();
+        //assign roles
+        $user->assignRole(array('Patient'));
+
+        // $user->sendEmailVerificationNotification();
 
         return $user;
     }
@@ -91,7 +102,9 @@ class RegisterController extends Controller
 
         // $this->guard()->login($user);
 
-        return $this->registered($request, $user)
-                            ?: redirect($this->redirectPath());
+        return redirect()->route('login')
+                        ->with('success','Registered successfully.');
+
+        // return $this->registered($request, $user)?: redirect($this->redirectPath());
     }
 }

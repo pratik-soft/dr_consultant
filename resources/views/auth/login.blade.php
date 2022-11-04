@@ -69,7 +69,7 @@
 
             @if (Route::has('register'))
             <p class="mb-0">
-                <a href="{{ route('register') }}" class="text-center">{{ __('Register a new account') }}</a>
+                <a href="{{ route('register') }}" class="text-center">{{ __('Register as Patient') }}</a>
             </p>
             @endif            
         </div>
