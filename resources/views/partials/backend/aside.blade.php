@@ -54,7 +54,7 @@
                         <a href="{{ route('backend.patient.index') }}" class="nav-link @isset($asideSelected) @if($asideSelected == 'patient') active @endif @endisset">
                             <i class="fas fa-users nav-icon"></i>
                             <p>
-                                Patients                                
+                                For Doctor                                
                             </p>
                         </a>                        
                     </li>

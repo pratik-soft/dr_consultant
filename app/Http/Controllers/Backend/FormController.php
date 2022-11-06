@@ -10,6 +10,7 @@ use DataTables;
 use Spatie\Permission\Models\Role;
 use Spatie\Permission\Models\Permission;
 use Lang;
+use Auth;
 
 class FormController extends Controller
 {
@@ -221,9 +222,17 @@ class FormController extends Controller
 
         $patient_symptoms_option = PatientSymptomsFormOption::create($save_data);
         $patient_symptoms_option->save();
-     
-        return redirect()->route('backend.patient.index')
+
+        $user = Auth::user();
+        if($user->hasRole('Patient')){
+            return redirect()->route('backend.dashboard.index')
                         ->with('success','Symptoms form created successfully.');
+        }
+        else{
+            return redirect()->route('backend.patient.index')
+                        ->with('success','Symptoms form created successfully.');
+        }
+     
     }
 
     /**

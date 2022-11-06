@@ -50,6 +50,12 @@ class PatientController extends Controller
             $data = User::select('users.*')->leftJoin('model_has_roles', 'model_has_roles.model_id', '=', 'users.id')->where('model_has_roles.role_id',$roles['id']);
             return Datatables::of($data)
                     ->addIndexColumn()
+                    ->addColumn('symptoms_form', function($row){
+                        return $symptoms_form = '<a href="'.route('backend.form.create').'/'.$row->id.'" class="dropdown-item edit btn btn-primary"><i class="fas fa-user"></i> Add Symptoms Form</a> ';
+                    })
+                    ->addColumn('assessment_form', function($row){
+                        return $assessment_form = '<a href="'.route('backend.assessmentform.create').'/'.$row->id.'" class="dropdown-item edit btn btn-primary"><i class="fas fa-check"></i> Add Assessment Form</a> ';
+                    })
                     ->addColumn('actions', function($row){                        
                         $view = '';
                         $edit = '';
@@ -78,11 +84,7 @@ class PatientController extends Controller
                                 <i class="fa fa-ellipsis-v"></i>
                             </button>
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
-                            '.$view.'
-                            '.$edit.'
                             '.$delete.'
-                            '.$symptoms_form.'
-                            '.$assessment_form.'
                             </div>
                         </div>';
     
@@ -106,7 +108,7 @@ class PatientController extends Controller
                     ->editColumn('updated_at', function(User $row) {
                         return getDatetimeHtml($row->updated_at, 'primary');
                     })
-                    ->rawColumns(['photo','status','created_at','updated_at','actions'])
+                    ->rawColumns(['photo','status','created_at','updated_at','actions','symptoms_form','assessment_form'])
                     ->make(true);
         }
     }
@@ -135,12 +137,24 @@ class PatientController extends Controller
             'first_name' => 'required',            
             'last_name' => 'required',            
             'email' => 'unique:patients',            
-            'contact_number' => 'required',            
-            'status' => 'required'
+            'contact_number' => 'required'
         ]);
              
-        $patient = Patient::create($request->all());
-        $patient->save();
+        // $patient = Patient::create($request->all());
+        // $patient->save();
+
+        $user = User::create([
+            'first_name' => $request->get('first_name'),
+            'last_name' => $request->get('last_name'),
+            'email' => $request->get('email'),
+            'phone' => $request->get('contact_number'),
+            'password' => rand(11111111,99999999),
+            'email_verified_at' => now(),
+            'status' => 1,
+        ]);
+
+        //assign roles
+        $user->assignRole(array('Patient'));
      
         return redirect()->route('backend.patient.index')
                         ->with('success','Patient created successfully.');
@@ -232,7 +246,7 @@ class PatientController extends Controller
      */
     public function delete($id)
     {
-        $data = Patient::findOrFail($id);
+        $data = User::findOrFail($id);
         $data->delete();
     }
 }

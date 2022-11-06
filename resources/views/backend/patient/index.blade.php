@@ -37,7 +37,7 @@
             <div class="container-fluid">
                 <div class="row text-right mb-1">
                     <div class="col-12">                        
-                        <a class="btn btn-success" href="{{ route('backend.patient.create') }}"><i class="fas fa-plus"></i> Add</a>
+                        <a class="btn btn-success" href="{{ route('backend.patient.create') }}"><i class="fas fa-plus"></i> Add New Patient</a>
                     </div>
                 </div>
             <div class="row">
@@ -60,9 +60,8 @@
                                 <th>Last Name</th>
                                 <th>Email</th>
                                 <th>Contact Number</th>
-                                <th style="width: 10%">Status</th>
-                                <th style="width: 10%">Created At</th>
-                                <th style="width: 10%">Updated At</th>
+                                <th></th>
+                                <th></th>
                                 <th style="width: 1%"></th>
                             </tr>
                         </thead>

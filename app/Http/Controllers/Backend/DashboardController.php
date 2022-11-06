@@ -14,6 +14,7 @@ use App\Models\Blog;
 use App\Models\Inquiry;
 use App\Models\Subscriber;
 use App\Models\User;
+use Auth;
 class DashboardController extends Controller
 {
     /**
@@ -57,6 +58,10 @@ class DashboardController extends Controller
         $users_count = User::count();
         // dd($users_count);
 
-        return view('backend.dashboard.index',compact('team_count','testimonials_count','clients_count','services_count','blogs_count','inquiries_count','subscribers_count','users_count'));
+        $user = Auth::user();
+
+        // dd($user->hasRole('Patient'));
+
+        return view('backend.dashboard.index',compact('team_count','testimonials_count','clients_count','services_count','blogs_count','inquiries_count','subscribers_count','users_count','user'));
     }
 }

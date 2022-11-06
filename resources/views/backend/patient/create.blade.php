@@ -80,7 +80,7 @@
                             @enderror
                         </div>
                     </div>
-                    <div class="form-group row required">
+                    <!-- <div class="form-group row required">
                         <label for="password" class="col-sm-2 col-form-label">Password</label>
                         <div class="col-sm-10">                            
                             <input id="password" type="text" name="password" value="{{ old('password') }}" class="form-control @error('password') is-invalid @enderror" placeholder="Password">
@@ -88,7 +88,7 @@
                                 <span class="error invalid-feedback">{{ $message }}</span>
                             @enderror
                         </div>
-                    </div>
+                    </div> -->
                     <div class="form-group row required">
                         <label for="contact_number" class="col-sm-2 col-form-label">Contact Number</label>
                         <div class="col-sm-10">                            
@@ -108,22 +108,22 @@
                         </div>
                     </div> -->
                                    
-                    <div class="form-group row required">
+                    <!-- <div class="form-group row required">
                         <label for="status" class="col-sm-2 col-form-label">Status</label>
                         <div class="col-sm-10">
                             <?php 
-                                $old_status = old('status');                                
+                                //$old_status = old('status');                                
                             ?>                            
                             <select name="status" id="status" class="form-control">                                           
                                 <option value="">--Please Select--</option>
-                                <option value="1" <?php if($old_status && $old_status == '1'){?> selected="selected"<?php } ?>>Active</option>
-                                <option value="0" <?php if($old_status && $old_status == '0'){?> selected="selected"<?php } ?>>Inactive</option>                                
+                                <option value="1" <?php //if($old_status && $old_status == '1'){?> selected="selected"<?php //} ?>>Active</option>
+                                <option value="0" <?php //if($old_status && $old_status == '0'){?> selected="selected"<?php //} ?>>Inactive</option>                                
                             </select>
                             @error('status')
                                 <span class="error invalid-feedback">{{ $message }}</span>
                             @enderror
                         </div>
-                    </div>
+                    </div> -->
                 </div>
                 <!-- /.card-body -->
                 <div class="card-footer">                    

@@ -26,9 +26,8 @@ $(function () {
             {data: 'last_name', name: 'last_name'},            
             {data: 'email', name: 'email'},            
             {data: 'phone', name: 'phone'},            
-            {data: 'status', name: 'status'},
-            {data: 'created_at', name: 'created_at'},
-            {data: 'updated_at', name: 'updated_at'},
+            {data: 'symptoms_form', name: 'symptoms_form', orderable: false, searchable: false},
+            {data: 'assessment_form', name: 'assessment_form', orderable: false, searchable: false},
             {data: 'actions', name: 'actions', orderable: false, searchable: false},
         ],
         drawCallback: function( settings ) {
