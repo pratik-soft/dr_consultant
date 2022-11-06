@@ -34,14 +34,33 @@
                     </li>
 
 
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a href="{{ route('backend.form.index') }}" class="nav-link @isset($asideSelected) @if($asideSelected == 'form') active @endif @endisset">
                             <i class="nav-icon fas fa-tachometer-alt"></i>
                             <p>
                                 Form                                
                             </p>
                         </a>                        
+                    </li> -->
+
+                    <?php 
+                    $canPatient = auth()->user()->can('patient-list');
+                    
+                    if($canPatient)
+                    {
+                    ?>
+
+                    <li class="nav-item">
+                        <a href="{{ route('backend.patient.index') }}" class="nav-link @isset($asideSelected) @if($asideSelected == 'patient') active @endif @endisset">
+                            <i class="fas fa-users nav-icon"></i>
+                            <p>
+                                Patients                                
+                            </p>
+                        </a>                        
                     </li>
+                    <?php 
+                    }
+                    ?>
 
                     <li class="nav-header">GENERAL</li>
 

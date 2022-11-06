@@ -19,35 +19,54 @@ $(function () {
         ignore: [],        
         focusInvalid: false,
         rules: {
-            'first_name': {
+            'diagnoses': {
                 required: true                
             },
-            'last_name': {
+            'past_medical_history': {
                 required: true                
             },
-            'email': {
+            'other_symptoms': {
                 required: true,
-                email: true,
             },
-            'phone': {
+            'central_nervous_system': {
                 required: true,                
             },
-            'password': {
+            'musculoskeletal': {
                 required: true                
             },
-            'password_confirmation': {
+            'gastrointestinal': {
                 required: true,
-                equalTo : "#password"
             },
-            'roles[]': {
-                required: true                
+            'urogenital_symptoms': {
+                required: true,
             },
-            'status': {
-                required: true                
+            'skin': {
+                required: true,
+            },
+            'gynae': {
+                required: true,
+            },
+            'drug_allergies': {
+                required: true,
+            },
+            'updates': {
+                required: true,
+            },
+            'risk_factors_c': {
+                required: true,
+            },
+            'family_history': {
+                required: true,
+            },
+            'interventions': {
+                required: true,
+            },
+            'new_tests': {
+                required: true,
             },
         },
         messages: {
-            'first_name': {
+            /*'first_name': {
                 required: "Please enter first name"                
             },
             'last_name': {
@@ -72,7 +91,7 @@ $(function () {
             },
             'status': {
                 required: "Please select status"                
-            },
+            },*/
         },
         errorElement: 'span',
         errorPlacement: function (error, element) {

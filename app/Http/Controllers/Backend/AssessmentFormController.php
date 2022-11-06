@@ -111,7 +111,7 @@ class AssessmentFormController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($patient_id)
     {
   
         // $form = Lang::get('form');
@@ -119,7 +119,7 @@ class AssessmentFormController extends Controller
         // echo "<pre>";
         // print_r($form['question']);
         // die();
-        return view('backend.assessmentform.create');
+        return view('backend.assessmentform.create',compact(array('patient_id')));
     }
 
     /**
@@ -130,23 +130,68 @@ class AssessmentFormController extends Controller
      */
     public function store(Request $request)
     {
-        // $request->validate([
-        //     'first_name' => 'required',            
-        //     'last_name' => 'required',            
-        //     'email' => 'unique:forms',            
-        //     'contact_number' => 'required',            
-        //     'status' => 'required'
-        // ]);
+        $request->validate([
+            'blood_sample' => 'required',
+            'ecg' => 'required',
+            'echocardiogram' => 'required',
+            'cmr' => 'required',
+            'holt' => 'required',
+            'pacemaker' => 'required',
+            'ett' => 'required',
+            'computed_tomography' => 'required',
+            'other' => 'required',
+            'on_examination' => 'required',
+            'blood_pressure' => 'required',
+            'heart_rate' => 'required',
+            'weight' => 'required',
+            'plans' => 'required',
+            'nota_bene' => 'required',
+            'ask_about' => 'required',
+            'main_diagnosis' => 'required',
+            'md_tests' => 'required',
+            'md_treatment' => 'required',
+            'risk_strat' => 'required',
+            'driving_dvla' => 'required',
+            'anticoagulation' => 'required',
+            'has_bled_score' => 'required',
+            'icd' => 'required',
+            'discharge' => 'required',
+            'date_of_next_follow_up' => 'required',
+            'genetics' => 'required',
+            'bp_recorder' => 'required',
+            'lipid' => 'required',
+            'family_screening' => 'required',
+            'chase' => 'required',
+            'diagnosis_other' => 'required',
+            'covid' => 'required',
+            'dental_check' => 'required',
+            'exercise' => 'required',
+            'alcohol_smoking' => 'required',
+            'dtf' => 'required',
+            'dt' => 'required',
+            'stop_ace_arb' => 'required',
+            'stop_meds' => 'required',
+            'ocp_card_preg_service' => 'required',
+            'cmuk' => 'required',
+            'bhf' => 'required',
+            'red_flags' => 'required',
+            'follow_up_mention' => 'required',
+            'call_after_tests' => 'required',
+            'time_of_follow_up' => 'required',
+            'follow_up_mdt' => 'required',
+            'follow_up_cc' => 'required',
+            'follow_up_red_flags' => 'required',
+        ]);
         $request->request->remove('_token');
-        $request->request->add(['patient_id' => '1','status' => '1']);
+        $request->request->add(['status' => '1']);
         // echo "<pre>";
         // print_r($request->all());
         // die();
         $form = AssessmentForm::create($request->all());
         $form->save();
      
-        return redirect()->route('backend.assessmentform.index')
-                        ->with('success','Form created successfully.');
+        return redirect()->route('backend.patient.index')
+                        ->with('success','Assessment form created successfully.');
     }
 
     /**

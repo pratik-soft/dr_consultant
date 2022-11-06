@@ -14,12 +14,12 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-sm-6">
-                        <h1>Form</h1>
+                        <h1>Symptoms Form</h1>
                     </div>
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="{{ route('backend.dashboard.index') }}">Home</a></li>
-                            <li class="breadcrumb-item"><a href="{{ route('backend.form.index') }}">Form</a></li>
+                            <li class="breadcrumb-item"><a href="{{ route('backend.form.index') }}">Symptoms Form</a></li>
                             <li class="breadcrumb-item active">Add</li>
                         </ol>
                     </div>
@@ -40,10 +40,11 @@
                     <div class="col-md-12">
                         <form action="{{ route('backend.form.store') }}" method="POST" id="addForm" enctype="multipart/form-data">
                             @csrf
+                            <input type="hidden" name="patient_id" value="{{$patient_id}}">
                             <!-- Default box -->
                             <div class="card card-success card-outline">
                                 <div class="card-header">
-                                    <h3 class="card-title">Add Form</h3>
+                                    <h3 class="card-title">Add Symptoms Form</h3>
 
                                     <div class="card-tools">
                                         <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fas fa-minus"></i></button>
@@ -870,7 +871,7 @@
                                                 </div>
 
                                                 <div class="icheck-primary d-inline">
-                                                    <input type="radio" class="radio_button"  id="risk_factors_a_no" name="risk_factors_a" value="no">
+                                                    <input type="radio" class="radio_button"  id="risk_factors_a_no" name="risk_factors_a" value="no" checked>
                                                     <label for="risk_factors_a_no">
                                                         No
                                                     </label>
@@ -887,7 +888,7 @@
                                                 </div>
 
                                                 <div class="icheck-primary d-inline">
-                                                    <input type="radio" class="radio_button"  id="risk_factors_b_no" name="risk_factors_b" value="no">
+                                                    <input type="radio" class="radio_button"  id="risk_factors_b_no" name="risk_factors_b" value="no" checked>
                                                     <label for="risk_factors_b_no">
                                                         No
                                                     </label>
@@ -951,8 +952,9 @@
                                 </div>
                                 <!-- /.card-body -->
                                 <div class="card-footer">
-                                    <a type="button" class="btn btn-default" href="{{ route('backend.form.index') }}"><i class="fas fa-times-circle"></i> Cancel</a>
-                                    <button type="submit" id="addBtn" class="btn btn-success float-right"><i class="fas fa-plus"></i> Add</button>
+                                    <button type="submit" id="addBtn" class="btn btn-success float-right"><i class="fas fa-plus"></i> Submit</button>
+                                    <span class="float-right">&nbsp;&nbsp;&nbsp;</span>
+                                    <a type="button" class="btn btn-default float-right" href="{{ route('backend.patient.index') }}"><i class="fas fa-times-circle"></i> Cancel</a>
                                 </div>
 
                                 <!-- /.card-footer-->

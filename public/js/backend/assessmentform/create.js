@@ -1,4 +1,3 @@
-
 $(".radio_button").click(function(){
     // $(this).click(function(){
         if($(this).attr("value") == 1){
@@ -19,60 +18,159 @@ $(function () {
         ignore: [],        
         focusInvalid: false,
         rules: {
-            'first_name': {
+            'blood_sample': {
                 required: true                
             },
-            'last_name': {
+            'ecg': {
                 required: true                
             },
-            'email': {
-                required: true,
-                email: true,
-            },
-            'phone': {
-                required: true,                
-            },
-            'password': {
+            'echocardiogram': {
                 required: true                
             },
-            'password_confirmation': {
-                required: true,
-                equalTo : "#password"
-            },
-            'roles[]': {
+            'cmr': {
                 required: true                
             },
-            'status': {
+            'holt': {
+                required: true                
+            },
+            'pacemaker': {
+                required: true                
+            },
+            'ett': {
+                required: true                
+            },
+            'computed_tomography': {
+                required: true                
+            },
+            'other': {
+                required: true                
+            },
+            'on_examination': {
+                required: true                
+            },
+            'blood_pressure': {
+                required: true                
+            },
+            'heart_rate': {
+                required: true                
+            },
+            'weight': {
+                required: true                
+            },
+            'plans': {
+                required: true                
+            },
+            'nota_bene': {
+                required: true                
+            },
+            'ask_about': {
+                required: true                
+            },
+            'main_diagnosis': {
+                required: true                
+            },
+            'md_tests': {
+                required: true                
+            },
+            'md_treatment': {
+                required: true                
+            },
+            'risk_strat': {
+                required: true                
+            },
+            'driving_dvla': {
+                required: true                
+            },
+            'anticoagulation': {
+                required: true                
+            },
+            'has_bled_score': {
+                required: true                
+            },
+            'icd': {
+                required: true                
+            },
+            'discharge': {
+                required: true                
+            },
+            'date_of_next_follow_up': {
+                required: true                
+            },
+            'genetics': {
+                required: true                
+            },
+            'bp_recorder': {
+                required: true                
+            },
+            'lipid': {
+                required: true                
+            },
+            'family_screening': {
+                required: true                
+            },
+            'chase': {
+                required: true                
+            },
+            'diagnosis_other': {
+                required: true                
+            },
+            'covid': {
+                required: true                
+            },
+            'dental_check': {
+                required: true                
+            },
+            'exercise': {
+                required: true                
+            },
+            'alcohol_smoking': {
+                required: true                
+            },
+            'dtf': {
+                required: true                
+            },
+            'dt': {
+                required: true                
+            },
+            'stop_ace_arb': {
+                required: true                
+            },
+            'stop_meds': {
+                required: true                
+            },
+            'ocp_card_preg_service': {
+                required: true                
+            },
+            'cmuk': {
+                required: true                
+            },
+            'bhf': {
+                required: true                
+            },
+            'red_flags': {
+                required: true                
+            },
+            'follow_up_mention': {
+                required: true                
+            },
+            'call_after_tests': {
+                required: true                
+            },
+            'time_of_follow_up': {
+                required: true                
+            },
+            'follow_up_mdt': {
+                required: true                
+            },
+            'follow_up_cc': {
+                required: true                
+            },
+            'follow_up_red_flags': {
                 required: true                
             },
         },
         messages: {
-            'first_name': {
-                required: "Please enter first name"                
-            },
-            'last_name': {
-                required: "Please enter last name"                
-            },
-            'email': {
-                required: "Please enter email",
-                email: "Please enter a vaild email address"                
-            },
-            'phone': {
-                required: "Please enter phone"
-            },
-            'password': {
-                required: "Please enter password"
-            },
-            'password_confirmation': {
-                required: "Please enter confirm password",
-                equalTo : "Please enter same password"
-            },
-            'roles[]': {
-                required: "Please select roles"                
-            },
-            'status': {
-                required: "Please select status"                
-            },
+            
         },
         errorElement: 'span',
         errorPlacement: function (error, element) {
@@ -99,6 +197,7 @@ $(function () {
             $(element).removeClass('is-invalid');
         },
         submitHandler: function(form) {
+            alert('aaa');
             form.submit();
         },
         invalidHandler: function(form, validator) {

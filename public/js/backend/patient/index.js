@@ -21,11 +21,11 @@ $(function () {
         sPaginationType: "listbox",
         order: [[ 0, "desc" ]],
         columns: [
-            {data: 'patient_id', name: 'patient_id'},
+            {data: 'id', name: 'id'},
             {data: 'first_name', name: 'first_name'},            
             {data: 'last_name', name: 'last_name'},            
-            {data: 'contact_number', name: 'contact_number'},            
             {data: 'email', name: 'email'},            
+            {data: 'phone', name: 'phone'},            
             {data: 'status', name: 'status'},
             {data: 'created_at', name: 'created_at'},
             {data: 'updated_at', name: 'updated_at'},

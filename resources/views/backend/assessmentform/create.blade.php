@@ -40,6 +40,7 @@
                     <div class="col-md-12">
                         <form action="{{ route('backend.assessmentform.store') }}" method="POST" id="addForm" enctype="multipart/form-data">
                             @csrf
+                            <input type="hidden" name="patient_id" value="{{$patient_id}}">
                             <!-- Default box -->
                             <div class="card card-success card-outline">
                                 <div class="card-header">
@@ -562,8 +563,9 @@
                                 </div>
                                 <!-- /.card-body -->
                                 <div class="card-footer">
-                                    <a type="button" class="btn btn-default" href="{{ route('backend.assessmentform.index') }}"><i class="fas fa-times-circle"></i> Cancel</a>
-                                    <button type="submit" id="addBtn" class="btn btn-success float-right"><i class="fas fa-plus"></i> Add</button>
+                                    <button type="submit" id="addBtn" class="btn btn-success float-right"><i class="fas fa-plus"></i> Submit</button>
+                                    <span class="float-right">&nbsp;&nbsp;&nbsp;</span>
+                                    <a type="button" class="btn btn-default float-right" href="{{ route('backend.patient.index') }}"><i class="fas fa-times-circle"></i> Cancel</a>
                                 </div>
 
                                 <!-- /.card-footer-->

@@ -111,7 +111,7 @@ class FormController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($patient_id)
     {
   
         // $form = Lang::get('form');
@@ -119,7 +119,7 @@ class FormController extends Controller
         // echo "<pre>";
         // print_r($form['question']);
         // die();
-        return view('backend.form.create');
+        return view('backend.form.create',compact(array('patient_id')));
     }
 
     /**
@@ -130,15 +130,25 @@ class FormController extends Controller
      */
     public function store(Request $request)
     {
-        // $request->validate([
-        //     'first_name' => 'required',            
-        //     'last_name' => 'required',            
-        //     'email' => 'unique:forms',            
-        //     'contact_number' => 'required',            
-        //     'status' => 'required'
-        // ]);
+        $request->validate([
+            'diagnoses' => 'required', 
+            'past_medical_history' => 'required', 
+            'other_symptoms' => 'required', 
+            'central_nervous_system' => 'required', 
+            'musculoskeletal' => 'required', 
+            'gastrointestinal' => 'required', 
+            'urogenital_symptoms' => 'required', 
+            'skin' => 'required', 
+            'gynae' => 'required', 
+            'drug_allergies' => 'required', 
+            'updates' => 'required', 
+            'risk_factors_c' => 'required', 
+            'family_history' => 'required', 
+            'interventions' => 'required', 
+            'new_tests' => 'required', 
+        ]);
         $request->request->remove('_token');
-        $request->request->add(['patient_id' => '1','status' => '1']);
+        $request->request->add(['status' => '1']);
         // echo "<pre>";
         // print_r($request->all());
         // die();
@@ -146,6 +156,11 @@ class FormController extends Controller
         $form->save();
 
         $patient_symptoms_form_id = $form->id;
+        $chest_pain_potion = array();
+        $shortness_of_breath_potion = array();
+        $coughing_potion = array();
+        $exercise_potion = array();
+        $medications_potion = array();
 
         if($request->chest_pain == 1){
             $chest_pain_potion = array(
@@ -207,8 +222,8 @@ class FormController extends Controller
         $patient_symptoms_option = PatientSymptomsFormOption::create($save_data);
         $patient_symptoms_option->save();
      
-        return redirect()->route('backend.form.index')
-                        ->with('success','Form created successfully.');
+        return redirect()->route('backend.patient.index')
+                        ->with('success','Symptoms form created successfully.');
     }
 
     /**
